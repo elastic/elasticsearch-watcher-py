@@ -10,14 +10,13 @@ class WatcherClient(AddonClient):
             params=params)
         return data
 
-    @query_params('pretty')
+    @query_params()
     def put_watch(self, id, body, params=None):
         """
         `<http://www.elastic.co/guide/en/watcher/current/appendix-api-put-watch.html>`_
 
         :arg id: Watch ID
         :arg body: The watch
-        :arg pretty: Pretty the output, default False
         """
         for param in (id, body):
             if param in SKIP_IN_PATH:
