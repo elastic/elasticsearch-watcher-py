@@ -11,13 +11,14 @@ class WatcherClient(AddonClient):
             params=params)
         return data
 
-    @query_params()
+    @query_params('master_timeout')
     def put_watch(self, id, body, params=None):
         """
         `<http://www.elastic.co/guide/en/watcher/current/appendix-api-put-watch.html>`_
 
         :arg id: Watch ID
         :arg body: The watch
+        :arg master_timeout: Specify timeout for watch write operation
         """
         for param in (id, body):
             if param in SKIP_IN_PATH:
@@ -53,12 +54,13 @@ class WatcherClient(AddonClient):
             params=params)
         return data
 
-    @query_params()
+    @query_params('master_timeout')
     def ack_watch(self, id, params=None):
         """
         `<http://www.elastic.co/guide/en/watcher/current/appendix-api-ack-watch.html>`_
 
         :arg id: Watch ID
+        :arg master_timeout: Specify timeout for watch write operation
         """
         if id in SKIP_IN_PATH:
             raise ValueError("Empty value passed for a required argument 'id'.")
@@ -93,12 +95,13 @@ class WatcherClient(AddonClient):
             'watch', id), params=params)
         return data
 
-    @query_params()
+    @query_params('master_timeout')
     def delete_watch(self, id, params=None):
         """
         `<http://www.elastic.co/guide/en/watcher/current/appendix-api-delete-watch.html>`_
 
         :arg id: Watch ID
+        :arg master_timeout: Specify timeout for watch write operation
         """
         if id in SKIP_IN_PATH:
             raise ValueError("Empty value passed for a required argument 'id'.")
