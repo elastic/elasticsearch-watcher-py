@@ -1,6 +1,7 @@
-from elasticsearch.utils import AddonClient, query_params, _make_path, SKIP_IN_PATH
+from elasticsearch.client.utils import AddonClient, query_params, _make_path, SKIP_IN_PATH
 
 class WatcherClient(AddonClient):
+    namespace = 'watcher'
     @query_params()
     def info(self, params=None):
         """
