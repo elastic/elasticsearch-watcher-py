@@ -2,7 +2,7 @@
 from os.path import join, dirname
 from setuptools import setup, find_packages
 
-VERSION = (0, 4, 0, 'dev')
+VERSION = (0, 4, 0)
 __version__ = VERSION
 __versionstr__ = '.'.join(map(str, VERSION))
 
@@ -11,8 +11,7 @@ long_description = f.read().strip()
 f.close()
 
 install_requires = [
-    # TODO: update when elasticsearch-py with AddonClient is released
-    'elasticsearch>=1.0.0, <2.0.0',
+    'elasticsearch>=1.5.0, <2.0.0',
 ]
 
 setup(
