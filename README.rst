@@ -52,7 +52,7 @@ Complex example
     # add the .watcher namespace to it
     WatcherClient.infect_client(es)
 
-    # clear the index fiorst
+    # clear the index first
     es.indices.delete(
         index=['alerts', 'test', '.watches', '.watch_history*'], ignore=404)
 
