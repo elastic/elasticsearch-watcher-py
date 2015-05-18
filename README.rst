@@ -14,7 +14,9 @@ You can install this addon using ``pip``::
 Usage
 -----
 
-You can use this client alone::
+You can use this client alone:
+
+.. code:: python
 
     from elasticsearch import Elasticsearch
     from elasticsearch_watcher import WatcherClient
@@ -25,7 +27,9 @@ You can use this client alone::
     watcher.get_watch(id=42)
 
 Or you can add the ``watcher`` namespace to the official client to mimic the
-behaviors of other namespaces::
+behaviors of other namespaces:
+
+.. code:: python
 
     WatcherClient.infect_client(client)
 
@@ -34,7 +38,7 @@ behaviors of other namespaces::
 Complex example
 ---------------
 
-A more comprehensive example::
+.. code:: python
 
     from time import sleep
     from datetime import datetime
