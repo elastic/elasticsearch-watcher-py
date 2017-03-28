@@ -2,7 +2,9 @@ Elasticsearch Watcher
 =====================
 
 This is an addon to the official elasticsearch python client that adds
-functionality for the Watcher plugin. 
+functionality for the Watcher plugin. If you are looking for the ``x-pack``
+plugin APIs please have a look at
+`elasticsearch-xpack <https://github.com/elastic/elasticsearch-x-pack-py>`_.
 
 Installation
 ------------
